@@ -1,9 +1,26 @@
-<script setup>
-</script>
-
 <template>
-  <div>Hello Vue3</div>
+  <div>
+    <button v-on:click="increment">Counter: {{ counter }}</button>
+  </div>
 </template>
 
-<style scoped>
+<script>
+  import { onMounted, ref } from 'vue';
+  export default {
+    setup() {
+      const counter = ref(0);
+      const increment = () => counter.value++;
+      onMounted(() => {
+        console.log('A component has been mounted with a composition API');
+      });
+      return {
+        counter,
+        increment,
+      };
+    },
+  };
+</script>
+
+<style lang="scss" scoped>
+
 </style>
