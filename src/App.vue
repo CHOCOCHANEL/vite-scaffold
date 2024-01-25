@@ -117,7 +117,14 @@
       </li>
     </ol>
   </div>
-  <div><h2>createApp()</h2></div>
+  <div>
+    <h2>createApp()</h2>
+    <ul>
+      <li><p>A vue component is passed to createApp().</p></li>
+      <li><p>A component's state should be declared inside its setup() function.</p></li>
+      <li><p>A component's state should be returned using an object.</p></li>
+    </ul>
+  </div>
 </template>
 
 <script>
